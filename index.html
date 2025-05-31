@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wikipedia Dashboard+</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/socialwik.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+  <div class="dashboard">
+    <aside class="sidebar" id="sidebar">
+      <div class="logo-wrapper">
+        <img src="images/socialwik.png" alt="Wikipedia+" class="logo" />
+        <h2 class="brand-name">Wikipedia+</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Overview</a></li>
+          <li><a href="#">Discussions</a></li>
+          <li><a href="#">Admin Boards</a></li>
+        </ul>
+      </nav>
+      <button id="darkToggle" aria-label="Toggle light/dark mode">
+        <span id="darkIcon">🌙</span>
+      </button>
+    </aside>
+
+    <main class="main-content">
+      <header class="mobile-header">
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <h1>Wikipedia Dashboard</h1>
+      </header>
+      <input type="text" id="searchInput" placeholder="Search section titles..." />
+      <button id="refreshBtn" title="Refresh dashboard">🔄</button>
+      <div id="loader" class="loader">Loading...</div>
+      <div id="sections" class="sections-grid"></div>
+    </main>
+  </div>
+
+  <script type="module" src="js/api.js"></script>
+  <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
